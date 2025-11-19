@@ -37,6 +37,15 @@
 name: Build Gradle Android Variants
 on:
   workflow_call:
+    secrets:
+      ANDROID_KEYSTORE:
+        required: true
+      ANDROID_KEYSTORE_PASSWORD:
+        required: true
+      ANDROID_KEY_ALIAS:
+        required: true
+      ANDROID_KEY_PASSWORD:
+        required: true
     inputs:
       # === REQUIRED ===
       java-version:
